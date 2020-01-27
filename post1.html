@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>uday</title>
+</head>
+   <style>
+   form{
+    width:35%;
+    background:#f1f1f1;
+    height:25%;
+    padding:10PX -50PX;
+    border-radius:20px;
+
+    left:15%;
+    position: fixed;
+   top: 40%;
+
+  right: 0;
+
+    transform:translate(50%,50%);
+
+    margin-bottom:100px;
+
+}
+body {
+  background-image: url('https://www.feedbackexpress.com/wp-content/uploads/2016/04/amazon_feedback.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+p{
+    position: absolute;
+         top:50%;
+    left: 40%;
+}
+
+</style>
+<body style="background-color: rgb(0, 153, 51)">
+    <form name="form" action="successful.html" method="post"  style="text-align: center" >
+    <table>
+     <tr>
+   <td> Rating:</td>
+
+   <td> <input type="radio"  id="myradio" name="Gender" value="1">1
+    <input type="radio"  name="Gender"  value="2" >2
+    <input type="radio" name="Gender" value="3">3
+    <input type="radio" name="Gender"  value="4">4
+    <input type="radio" name="Gender" value="5">5
+    <input type="radio" name="Gender" value="6">6
+    <input type="radio" name="Gender" value="7">7
+    <input type="radio" name="Gender" value="8">8
+    <input type="radio" name="Gender" value="9">9
+    <input type="radio" name="Gender" value="10">10
+     </td></tr>
+   <tr>
+<td>  Remarks:</td><td> <textarea name=text type="text" rows=4 cols=50 max=50 type="alaphabets" name="remark" placeholder="(max 50 words)" > </textarea></td>   </tr>
+     <tr>
+   <td> <p align=center ><button type="button"  onclick="displayRadioValue()"   style="background-color:#FFFFFF;margin-left:auto;margin-right:auto;display:block;margin-top:22%;margin-bottom:0%">
+
+        Submit
+    </button> </p>
+    </td>
+       </tr>
+
+
+    <div id="result"></div>
+
+
+    </table>
+   </form>
+</body>
+    <script>
+
+         function displayRadioValue()
+        {
+                   document.getElementById("result").innerHTML = "";
+            var ele = document.getElementsByTagName('input');
+
+            for(i = 0; i < ele.length; i++)
+            {
+                if(ele[i].type="radio")
+                {
+                    if(ele[i].checked)
+                               if(ele[i].value!="9" && ele[i].value!="10")
+                               {       document.form.text.focus()
+                                   alert("Suggest the remarks");
+                                   return true;
+
+                                }
+
+
+
+
+                }
+
+            }
+        }
+
+    </script>
+</html>
